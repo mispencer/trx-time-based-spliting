@@ -108,7 +108,7 @@ rootCommand.SetHandler((file, parallelization, maxFilters, verbosityA) =>
         Log(verbosity, 1, "FR (CD):\n"+ J(partsDur));
         Log(verbosity, 2, "FR (TD):\n"+ J(parts.Select(i => i.Select(i => (i, testResult[i]))).ToArray()));
 
-        result[thisParallelization] = partsZ;
+        result[thisParallelization] = parts;
     }
 
     Console.WriteLine(J(result));
